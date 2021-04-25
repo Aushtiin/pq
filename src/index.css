@@ -1,0 +1,334 @@
+body{
+  box-sizing: border-box;
+  margin: 0;
+  width: 100% !important;
+  max-height: 100vh;
+  padding: 0;
+  max-width: 100% !important;
+}
+
+.cart-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* padding: 10px; */
+  border-radius: 15px;
+  /* height: fit-content; */
+  width: 80%;
+  /* margin-top: 25px; */
+  position: relative;
+}
+
+.move {
+  position: relative;
+  top: 4vh;
+}
+
+.total {
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  width: 80%;
+  margin-top: 15px;
+}
+
+.half {
+  background-color: #9e0a4c;
+  height: 100vh;
+  position: relative;
+}
+
+.half2 {
+  background-color: #eeeeee;
+  height: 100vh;
+  position: relative;
+}
+
+.logo {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#linkback {
+  position: relative;
+}
+
+#linkback > a {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  left: 35px;
+  top: 35px;
+  padding: 10px;
+}
+
+.bottomtext {
+  position: absolute;
+  bottom: 35px;
+}
+
+.bottomtext ul li {
+  color: white;
+}
+
+.bottomtext > ul > li > span {
+  position: relative;
+  left: -8px;
+  bottom: 2px;
+}
+
+.cart-sec {
+  position: absolute;
+  /* left: 25%; */
+  top: 38px;
+  width: 100%;
+  left: 8px;
+}
+
+#ordertext {
+  margin-bottom: 5%;
+  position: relative;
+  left: 10%;
+}
+
+.text span {
+  /* line-height: 0px; */
+  font-size: 11px;
+  /* position: relative;
+  right: 40px;
+  top: 15px; */
+  display: block;
+}
+
+.text {
+  position: absolute;
+  left: -5px;
+}
+
+.pg-img {
+  width: 100px;
+  /* height: 70px; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.apq {
+  color: #7b1061;
+  text-align: center;
+}
+
+.txt {
+  font-size: 15px;
+}
+
+.imgtxt {
+  font-size: 11px;
+  text-align: center;
+  color: #7b1061;
+  margin-top: 10px;
+}
+
+.options {
+  width: 100px;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 17px;
+  cursor: pointer;
+}
+
+.options:focus{
+  background-color: #eecfe6;
+}
+
+.formlabel {
+  color: #892b72;
+  font-weight: 500;
+}
+
+#naira {
+  font-weight: bold;
+  color: #fff;
+}
+
+#inputGroupPrepend {
+  background-color: #720056;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+.formcontrol {
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+  padding: 3px;
+  border-radius: 5px;
+  border: 0 !important;
+}
+
+.loansexit {
+  text-align: center;
+  padding: 8px;
+}
+
+.this{
+  border-left: 1px solid rgb(179, 173, 173);
+}
+
+.ctn{
+  color: #ff3680;
+}
+
+.btn-outline-success:hover .ctn{
+  color: #fff;
+}
+
+.ctnbtn{
+  position: relative;
+  /* top: 250px; */
+}
+
+.btn-outline-success:hover{
+  background-color: #9e0a4c !important;
+}
+
+#existingLoans{
+  color: #9e0a4c;
+}
+
+.monthbox{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+.monthbox:focus{
+  background-color: #9e0a4c;
+}
+
+.monthbox:hover{
+  background-color: #9e0a4c;
+}
+
+.monthbox:focus > span{
+  color: white;
+}
+
+.monthbox:hover > span{
+  color: white;
+}
+
+.top{
+  background-color: #fe5a5a;
+  height: 10px;
+  width: stretch;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.top2{
+  background-color: #ff51f3;
+}
+
+.top3{
+  background-color: #6751ff;
+}
+
+.top4{
+  background-color: #51ffed;
+}
+
+.top5{
+  background-color: #ffae51;
+}
+
+.top6{
+  background-color: #6dff51;
+}
+
+.chtxt{
+  color: #740459;
+}
+
+.stxt{
+  font-size: small;
+  display: block;
+  overflow-wrap: break;
+}
+
+.numtxt{
+  font-size: xx-large;
+}
+
+.paymentbreakdown{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.lbl{
+  border-left: 1px solid rgb(179, 173, 173);
+}
+
+.dwntxt{
+  font-size: 16px;
+  color: white;
+  font-weight: 400px;  
+}
+
+.customside{
+  background: linear-gradient(180deg, rgba(145,0,87,1) 22%, rgba(114,0,86,1) 52%, rgba(234,0,93,1) 83%);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center !important;
+}
+
+.uptbtn{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#naira2{
+  color: #7c1262;
+}
+
+#inputGroupPrepend2{
+  background-color: #fff;
+}
+
+.section2{
+  margin-top: 20%;
+}
+
+.ctbnt{
+  position: relative;
+  top: 8vh;
+}
+
+.bdtxt{
+  color: #8a2b72;
+  font-size: 18px;
+}
+
+.lbo{
+  color: #8e3478;
+  font-weight: bold
+}
+
+#bckbtn{
+  position: relative;
+  top: 4vh;
+  margin-bottom: 20px;
+}
+
+#bckbtn > a {
+  text-decoration: none
+}
