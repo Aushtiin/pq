@@ -11,7 +11,7 @@ const Approval2 = () => {
   const [tenure, setTenure] = useState('')
   const [error, setError] = useState('')
 
-  const handleDownPayment = (e) => {
+  const handlePaymentSummary = (e) => {
     e.preventDefault()
     const minimumDownPayment = cartValue * 0.3
     if (tenure === '') {
@@ -19,6 +19,9 @@ const Approval2 = () => {
       return
     } else if (!Number(downPayment)) {
       setError('Please enter a valid amount')
+      return
+    } else if (Number(downPayment) > cartValue) {
+      setError('Down payment cannot be greater than cart total')
       return
     } else if (minimumDownPayment > Number(downPayment)) {
       setError(`Down Payment cannot be less than ₦${minimumDownPayment}`)
@@ -129,7 +132,7 @@ const Approval2 = () => {
               <Col className='customside paymentbreakdown' md={4}>
                 <span className='dwntxt'>Customize Down Payment</span>
 
-                <Form className='mt-2' onSubmit={handleDownPayment}>
+                <Form className='mt-2' onSubmit={handlePaymentSummary}>
                   <Form.Group>
                     <InputGroup>
                       <InputGroup.Prepend>
