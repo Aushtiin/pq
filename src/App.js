@@ -8,7 +8,7 @@ function App() {
   
   return (
     <Router>
-      <Row>
+      <Row className='maincontent'>
         <Col md={6}>
           <Cart />
         </Col>

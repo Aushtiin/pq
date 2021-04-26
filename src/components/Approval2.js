@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Container, Row, Col, Form, InputGroup, Button } from 'react-bootstrap'
+import CheckoutSteps from './CheckoutSteps'
 import Message from './Message'
 
 const Approval2 = () => {
@@ -16,7 +17,7 @@ const Approval2 = () => {
     if (tenure === '') {
       setError('Please Choose a Plan')
       return
-    } else if (!Number(downPayment)){
+    } else if (!Number(downPayment)) {
       setError('Please enter a valid amount')
       return
     } else if (minimumDownPayment > Number(downPayment)) {
@@ -33,10 +34,13 @@ const Approval2 = () => {
   }
   return (
     <Container>
-      <div id="bckbtn">
-        <a href="/">
-          <i style={{ color: "#ff488b" }} className="fas fa-arrow-left"></i><span style={{ color: "#ff488b" }}> Back</span>
-        </a>
+      <div className="topcontent">
+        <div id="bckbtn">
+          <a href="/">
+            <i style={{ color: "#ff488b" }} className="fas fa-arrow-left"></i><span style={{ color: "#ff488b" }}> Back</span>
+          </a>
+        </div>
+        <CheckoutSteps step1 />
       </div>
       <Row className='justify-content-md-center'>
         <Col md={10}>
@@ -160,7 +164,7 @@ const Approval2 = () => {
             </Row>
           </div>
 
-          <div className="ctnbtn text-center ctbnt">
+          <div className="ctnbtn text-center ctbnt my-4">
             <Button
               style={{
                 border: "2px solid #ff97bd",

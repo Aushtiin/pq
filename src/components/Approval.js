@@ -14,7 +14,9 @@ const Approval = ({history}) => {
   }
   return (
     <Container>
-      <CheckoutSteps step1 />
+      <div className="topcheck mt-4">
+      <CheckoutSteps />
+      </div>
       <Row className='justify-content-md-center'>
         <Col md={7} xs={12}>
           <h5 className='apq my-4'>What Do You Do?</h5>
@@ -115,7 +117,7 @@ const Approval = ({history}) => {
                 </Row>
               </div>
             </Form.Group>
-            <div className="ctnbtn text-center">
+            <div className="ctnbtn text-center mt-5">
               <Button
                 style={{
                   border: "2px solid #ff97bd",
