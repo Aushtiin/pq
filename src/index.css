@@ -2,7 +2,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   /* width: 100vw !important; */
-  max-height: 100vh !important;
+  /* max-height: 100vh !important; */
+  /* min-height: auto !important; */
   padding: 0;
   max-width: 100% !important;
 }
@@ -34,14 +35,19 @@ body {
 
 .half {
   background-color: #9e0a4c;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
 .half2 {
   background-color: #eeeeee;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
+}
+
+.content6{
+  overflow: scroll;
+  height: 100vh;
 }
 
 .logo {
@@ -347,29 +353,30 @@ body {
   max-height: 100% !important;
 }
 
-/* .step {
-  border-radius: 50%;
-  /* width: 36px;
-  height: 36px;
-  padding: 8px; */
-
-  /* background: #fff;
-  border: 1px solid #666;
-  color: #666;
-  text-align: center; */
-  
-
-  /* font: 32px Arial, sans-serif; */
-/* } */
-
-/* .progressbar{
-  position: absolute; */
-  /* width: 100vw;
-  height: 10px; */
-  /* background-color: gray;
-  z-index: -1; */
-/* }  */
-
 .fa{
   color: #ff0360;
 }
+
+#inpot{
+  text-align: center;
+}
+
+.form-control::-webkit-input-placeholder{
+  color: #923b7d;
+}
+
+.form-control::placeholder{
+  color: #923b7d;
+}
+
+
+.form-control:-ms-input-placeholder{
+  color: #923b7d;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator { position: absolute; left: 0; }
+input[type="date"]::-webkit-datetime-edit { position: relative; right: 0; }
+input::-webkit-datetime-edit-fields-wrapper { position: relative; right: 0; }
+
+

@@ -4,7 +4,7 @@ import { Col, Container, Image, Row, } from 'react-bootstrap'
 const Cart = () => {
   return (
     <>
-      <Row>
+      <Row className='h-100'>
         <Col className='half' md={6}>
           <div id="linkback">
             <a href="/"><i style={{ color: "white" }} className="fas fa-arrow-left"></i> Back To Store</a>

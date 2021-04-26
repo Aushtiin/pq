@@ -3,19 +3,20 @@ import { Container, Form, Button, Col, Row, Image, InputGroup } from 'react-boot
 import Calendar from 'react-calendar';
 import CheckoutSteps from './CheckoutSteps';
 
-const Approval = ({history}) => {
+const Approval = ({ history }) => {
   const [profession, setProfession] = useState('')
   const [monthlyPay, setMonthlyPay] = useState('')
-  const [payDate, setPayDate] = useState('')
+  const [payDate, setPayDate] = useState(new Date())
   const [existingLoan, setExistingLoan] = useState('')
+  const [show, setShow] = useState(false)
 
   const handleSubmit = () => {
     history.push('/2')
   }
   return (
-    <Container>
+    <Container fluid>
       <div className="topcheck mt-4">
-      <CheckoutSteps />
+        <CheckoutSteps />
       </div>
       <Row className='justify-content-md-center'>
         <Col md={7} xs={12}>
@@ -71,6 +72,7 @@ const Approval = ({history}) => {
                 </InputGroup.Prepend>
                 <Form.Control
                   type="text"
+                  data-type="currency"
                   className="formcontrol"
                   value={monthlyPay}
                   onChange={(e) => setMonthlyPay(e.target.value)}
@@ -80,12 +82,30 @@ const Approval = ({history}) => {
 
             <Form.Group>
               <Form.Label><span className='mb-3 formlabel'>When is your next salary date?</span></Form.Label>
-              <Form.Control
-                className="formcontrol"
-                type="date"
-                value={payDate}
-                onChange={(e) => setPayDate(e.target.value)}
-              />
+              <InputGroup>
+                <InputGroup.Prepend>
+                  <InputGroup.Text 
+                  style={{backgroundColor: "#75065a", boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)', border: 'none'}} 
+                  id="inputGroupPrepend3"
+                  >
+                    <span style={{color: "white"}}><i className="fas fa-calendar-alt"></i></span>
+                  </InputGroup.Text>
+                </InputGroup.Prepend>
+                <Form.Control
+                  className="formcontrol"
+                  type="text"
+                  placeHolder="Select pay date"
+                  id='inpot'
+                  onFocus={() => setShow(true)}
+                  style={{color: "transparent"}}
+                />
+                {show &&
+                  <Calendar
+                    className='my-3 mx-auto'
+                    value={payDate}
+                    onChange={setPayDate}
+                  />}
+              </InputGroup>
             </Form.Group>
 
             <Form.Group>
@@ -110,14 +130,14 @@ const Approval = ({history}) => {
                       id='existingLoans'
                       name='existingLoans'
                       value='No'
-                    onChange={(e) => setExistingLoan(e.target.value)}
+                      onChange={(e) => setExistingLoan(e.target.value)}
                     >
                     </Form.Check>
                   </Col>
                 </Row>
               </div>
             </Form.Group>
-            <div className="ctnbtn text-center mt-5">
+            <div className="ctnbtn text-center my-5">
               <Button
                 style={{
                   border: "2px solid #ff97bd",
